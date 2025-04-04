@@ -92,7 +92,7 @@ console.log('profile',profile._id)
           }
   
           const url = `${baseUrl}/deleteEmp`;  
-          const data=profile._id;
+          
            const response = await axios.delete(url, {
             data: { _id: profile._id },
           });

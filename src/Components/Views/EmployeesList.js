@@ -43,7 +43,7 @@ const editOrDelete = (profile) => {
             key={index}
             sx={{
               width: "100%",
-              maxWidth:window.innerWidth>600? "1200px":'300px',
+              maxWidth:window.innerWidth>600? "900px":'300px',
               
               boxShadow: "5px 5px 15px rgba(0, 0, 0, 0.2)",
               borderRadius: "12px",
