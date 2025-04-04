@@ -45,11 +45,9 @@ const [addedEmp,setAddedEmp]=useState(null);
   // Save employee
   const handleSaveEmployee = async () => {
     let baseUrl = '';
-    if (process.env.NODE_ENV === 'production') {
-      baseUrl = '/employees';
-    } else {
+    
       baseUrl = "http://localhost:5000";
-    }
+    
   
     const url = `${baseUrl}/addEmp`;
     try {

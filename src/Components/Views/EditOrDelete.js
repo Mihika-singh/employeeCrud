@@ -20,11 +20,9 @@ export default function EditOrDelete() {
     if (isEditing) {
       try {
         let baseUrl = '';
-        if (process.env.NODE_ENV === 'production') {
-          baseUrl = '/employees';
-        } else {
+      
           baseUrl = "http://localhost:5000";
-        }
+       
   
         const url = `${baseUrl}/updateDetails`;
   
@@ -85,12 +83,9 @@ console.log('profile',profile._id)
       if (result.isConfirmed) {
         try {
           let baseUrl = '';
-          if (process.env.NODE_ENV === 'production') {
-            baseUrl = '/employees';
-          } else {
+          
             baseUrl = "http://localhost:5000";
-          }
-  
+         
           const url = `${baseUrl}/deleteEmp`;  
           
            const response = await axios.delete(url, {
@@ -117,7 +112,7 @@ const navigateHome=()=>{
 // Toggle availability
 const toggleAvailability = async () => {
     try {
-      let baseUrl = process.env.NODE_ENV === 'production' ? '/employees' : 'http://localhost:5000';
+      let baseUrl =  'http://localhost:5000';
       const url = `${baseUrl}/updateDetails`;
   
       // Toggle availability as a string

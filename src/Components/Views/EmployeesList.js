@@ -14,12 +14,9 @@ const editOrDelete = (profile) => {
   const fetchSpecialData = async () => {
     let baseUrl = "";
   
-    if (process.env.NODE_ENV === "production") {
-      baseUrl = "/employee"; // Change this based on production API
-    } else {
+    
       baseUrl = "http://localhost:5000"; // Backend server URL
-    }
-  
+   
     const url = `${baseUrl}/employees`; // Correct API route
   
     try {
